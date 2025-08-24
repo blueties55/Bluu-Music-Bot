@@ -1,0 +1,57 @@
+#######################################################
+# Config for Bluu Music Bot                           #
+#######################################################
+# Example configuration file for GitHub users.        #
+#                                                     #
+# USAGE:                                              #
+# 1. Copy this file to 'settings.txt'                 #
+# 2. Replace YOUR_BOT_TOKEN_HERE with your Discord    #
+#    bot token.                                       #
+# 3. Replace CHANNEL_ID_HERE with your text channel   #
+#    ID for music commands.                           #
+# 4. Replace ROLE_ID_OR_NAME_HERE with your DJ role   #
+#    ID or name.                                      #
+# 5. Replace USER_ID_HERE in dm_response with a       #
+#    user ID to mention in the DM response, or        #
+#    leave as placeholder.                            #
+# 6. Do NOT change the parameter names (everything    #
+#    before the = sign) or formatting.                #
+#######################################################
+
+[DEFAULT]
+
+# All titles must stay the same. If you change any of them then the bot won't work.
+# Again formatting is VERY specific here. All values must follow the same syntax:
+# value_name=value
+# DO NOT change the value_name and make sure there are no spaces between the title and value.
+
+# This sets the token for the bot to log in with
+# This MUST be a bot token (user tokens will not work)
+# If you don't know how to get a bot token, please see Discord's documentation
+# Here is a good guide: https://discordgsm.com/guide/how-to-get-a-discord-bot-token
+DISCORD_API_TOKEN=YOUR_BOT_TOKEN_HERE
+
+# This sets the command prefix for the bot. Please change this if you have a bot
+# that already uses this prefix for receiving commands.
+# Note: If a bot uses '!' for their commands and you set this to '!!' both bots will respond.
+# If you don't want mention as a command prefix option change mentions_as_prefix=False
+command_prefix=?
+mentions_as_prefix=True
+
+# This will set the message you would like users to receive
+# when they send a DM to the bot. This is a custom option and isn't required
+# If you would like nothing to happen when the bot receives a DM leave blank.
+# This is the same response used when users mention the bot in a message ie. @bot
+dm_response=I see I was pinged. Please leave me alone; I am busy playing music for humans. If you need something please DM <@OWNER_USER_ID_HERE>
+
+# Set this value to your bot command channel or music command channel.
+# You must set this to use most of the bot commands, this helps keep general chat channels clean.
+# To copy the channel ID of a text channel enable Developer Mode in Discord's advanced settings first.
+# Then simply right click any channel and Copy Channel ID will be an option. Paste that below.
+allowed_channel_id=CHANNEL_ID_HERE
+
+# Set this role to the DJ or similar role in your server.
+# You must set this to use some of the restricted bot commands. This allows control over who can do certain things in the server.
+# To copy the role ID in your server, enable Developer Mode in Discord's advanced settings first.
+# Then simply right click any role in the role settings and Copy that ID or name. Paste it below.
+dj_role_id=ROLE_ID_OR_NAME_HERE

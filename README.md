@@ -7,7 +7,7 @@ Bluu Music Bot is a Discord bot that allows users to play and manage music withi
 - 🎶 Play music from YouTube and other sources
 - 🔁 Queue management with shuffle and remove options
 - ⏹️ Playback control: play, skip, stop
-- 🔐 Role-based command access for DJs
+- 🔐 Role-based command access for DJs (Currently implemented but not used)
 - 📩 Customizable direct message responses
 - 📃 Playlist support (adds multiple songs to the queue at once)
 
@@ -41,12 +41,12 @@ Ensure you have the following installed:
     ```
 4. Open `settings.txt` in a text editor and replace the placeholders with your actual values:
 
-   - DISCORD_API_TOKEN: Your Discord bot token
-   - allowed_channel_id: The ID of the text channel for music commands
-   - dj_role_id: The ID or name of the DJ role
-   - command_prefix: Prefix for bot commands (default is ?)
-   - mentions_as_prefix: Whether @mentions can be used as a command prefix (True or False)
-   - dm_response: Message sent when the bot receives a DM
+   - `DISCORD_API_TOKEN`: Your Discord bot token
+   - `allowed_channel_id`: The ID of the text channel for music commands
+   - `dj_role_id`: The ID or name of the DJ role
+   - `command_prefix`: Prefix for bot commands (default is ?)
+   - `mentions_as_prefix`: Whether @mentions can be used as a command prefix (True or False)
+   - `dm_response`: Message sent when the bot receives a DM
 
    Important: Do not change the parameter names (everything before the = sign).
 
@@ -55,21 +55,23 @@ Usage
 
 Run the bot with:
 
+   ```bash
    python3 main.py
+   ```
 
 The bot will log in and load all cogs. It will only respond to commands in the channel specified by allowed_channel_id.
 
 Commands
 --------
 
-- ?play <song or playlist>: Play a song or an entire playlist
-- ?skip: Skip the current song
-- ?stop: Stop playback and clear the queue
-- ?queue: Display the current song queue
-- ?shuffle: Shuffle the queue
-- ?remove <position>: Remove a song from the queue
-- ?nowplaying: Show the currently playing song
-- ?move <from> <to>: Move a song in the queue (DJ role required)
+- `?play <song or playlist>`: Play a song or an entire playlist (YouTube links or search with song name and or artist)
+- `?skip`: Skip the current song
+- `?stop`: Stop playback and clear the queue
+- `?queue`: Display the current song queue
+- `?shuffle`: Shuffle the queue
+- `?remove <position#>`: Remove a song from the queue
+- `?nowplaying`: Show the currently playing song
+- `?move <from#> <to#>`: Move a song in the queue (DJ role required(Currently implemented but not used))
 
 Note: Commands that modify the queue may require the DJ role.
 

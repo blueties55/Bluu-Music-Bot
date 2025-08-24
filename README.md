@@ -24,7 +24,7 @@ Ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/blueties55/Bluu-Music-Bot/bluu-music-bot.git
+   git clone https://github.com/blueties55/Bluu-Music-Bot.git
    ```
    ```bash
    cd bluu-music-bot
